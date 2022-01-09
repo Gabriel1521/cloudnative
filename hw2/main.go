@@ -14,6 +14,6 @@ func main(){
 	mux.HandleFunc("/getHeader",controller.GetHeader)
 	logger.Print("Listening server address localhost:80")
 	if err := http.ListenAndServe("localhost:80", nil); err != nil {
-		logger.Fatal("start server failer")
+		logger.Fatalf("start server failer")
 	}
 }
